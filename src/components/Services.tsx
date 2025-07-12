@@ -291,7 +291,7 @@ const Services: React.FC<ServicesProps> = ({ darkMode }) => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style >{`
         @keyframes gradient-x {
           0%, 100% {
             background-size: 200% 200%;

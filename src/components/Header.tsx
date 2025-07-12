@@ -43,7 +43,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
           : 'bg-white/95 backdrop-blur-xl shadow-2xl border-b border-yellow-500/20'
         : 'bg-transparent'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mb-4 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo with Animation */}
           {darkMode ? (
@@ -97,7 +97,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`md:hidden p-3 rounded-full transition-all duration-300 transform hover:scale-110 ${
+              className={`md:hidden rounded-full p-3 transition-all duration-300 transform hover:scale-110 ${
                 darkMode ? 'text-gray-300 hover:text-yellow-400 hover:bg-gray-800' : 'text-gray-700 hover:text-yellow-600 hover:bg-gray-100'
               }`}
             >
@@ -120,7 +120,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
         </div>
 
         {/* Mobile Navigation with Slide Animation */}
-        <div className={`md:hidden overflow-hidden transition-all duration-500 ease-out ${
+        <div className={`md:hidden rounded-[20px] overflow-hidden transition-all duration-500 ease-out ${
           isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}>
           <div className={`px-2 pt-2 pb-6 space-y-2 ${
