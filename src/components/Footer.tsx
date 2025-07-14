@@ -15,7 +15,8 @@ const Footer: React.FC<FooterProps> = ({ darkMode }) => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-yellow-400">i Nails</h3>
+            <h3 className="text-2xl font-bold text-yellow-400">  <a href="#"><img src="/logo-dark.png" alt="i Nails Dark" className="h-20" /></a>
+</h3>
             <p className="text-gray-300 leading-relaxed">
               Premier beauty studio specializing in nail art, eyelash extensions, and permanent makeup services. 
               We bring Korean beauty techniques to enhance your natural elegance.
@@ -42,27 +43,27 @@ const Footer: React.FC<FooterProps> = ({ darkMode }) => {
             <h4 className="text-lg font-semibold text-yellow-400">Services</h4>
             <ul className="space-y-2 text-gray-300">
               <li>
-                <a href="#" className="hover:text-yellow-400 transition-colors duration-200">
+                <a href="#services" className="hover:text-yellow-400 transition-colors duration-200">
                   Nail Art & Care
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-yellow-400 transition-colors duration-200">
+                <a href="#services" className="hover:text-yellow-400 transition-colors duration-200">
                   Eyelash Extensions
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-yellow-400 transition-colors duration-200">
+                <a href="#services" className="hover:text-yellow-400 transition-colors duration-200">
                   Permanent Makeup
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-yellow-400 transition-colors duration-200">
+                <a href="#services" className="hover:text-yellow-400 transition-colors duration-200">
                   Korean BB Glow
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-yellow-400 transition-colors duration-200">
+                <a href="#services" className="hover:text-yellow-400 transition-colors duration-200">
                   Eyebrow Microblading
                 </a>
               </li>
@@ -74,22 +75,22 @@ const Footer: React.FC<FooterProps> = ({ darkMode }) => {
             <h4 className="text-lg font-semibold text-yellow-400">Courses</h4>
             <ul className="space-y-2 text-gray-300">
               <li>
-                <a href="#" className="hover:text-yellow-400 transition-colors duration-200">
+                <a href="#courses" className="hover:text-yellow-400 transition-colors duration-200">
                   Eyelash Extensions Course
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-yellow-400 transition-colors duration-200">
+                <a href="#courses" className="hover:text-yellow-400 transition-colors duration-200">
                   Nail Extensions Course
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-yellow-400 transition-colors duration-200">
+                <a href="#courses" className="hover:text-yellow-400 transition-colors duration-200">
                   Certification Programs
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-yellow-400 transition-colors duration-200">
+                <a href="#courses" className="hover:text-yellow-400 transition-colors duration-200">
                   Advanced Techniques
                 </a>
               </li>

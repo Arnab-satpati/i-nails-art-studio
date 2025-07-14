@@ -10,7 +10,6 @@ const Services: React.FC<ServicesProps> = ({ darkMode }) => {
   const [services, setServices] = useState<Service[]>([]);
   const [loading, setLoading] = useState(true);
   const [hoveredService, setHoveredService] = useState<string | null>(null);
-  const [visibleServices, setVisibleServices] = useState<Set<number>>(new Set());
 
   useEffect(() => {
     const fetchServices = async () => {
@@ -33,28 +32,6 @@ const Services: React.FC<ServicesProps> = ({ darkMode }) => {
     };
 
     fetchServices();
-
-    // Intersection Observer for scroll animations
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const index = parseInt(entry.target.getAttribute('data-index') || '0');
-            setVisibleServices(prev => new Set([...prev, index]));
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    // Observe service cards after they're rendered
-    setTimeout(() => {
-      document.querySelectorAll('.service-card').forEach((card) => {
-        observer.observe(card);
-      });
-    }, 100);
-
-    return () => observer.disconnect();
   }, []);
 
   const fallbackServices = [
@@ -160,17 +137,14 @@ const Services: React.FC<ServicesProps> = ({ darkMode }) => {
           {services.map((service, index) => {
             const IconComponent = getServiceIcon(service.title);
             const imageUrl = service.image ? urlFor(service.image).width(800).height(600).url() : getDefaultImage(service.title);
-            const isVisible = visibleServices.has(index);
             
             return (
               <div
                 key={service._id}
-                data-index={index}
-                className={`service-card relative group cursor-pointer transform transition-all duration-700 ${
-                  isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-                } hover:scale-105 ${
-                  darkMode ? 'bg-gray-900' : 'bg-white'
-                } rounded-3xl shadow-2xl overflow-hidden hover:shadow-yellow-500/25`}
+                className={`service-card relative group cursor-pointer transform transition-all duration-700 hover:scale-105 ${
+  darkMode ? 'bg-gray-900' : 'bg-white'
+} rounded-3xl shadow-2xl overflow-hidden hover:shadow-yellow-500/25`}
+
                 style={{ animationDelay: `${index * 200}ms` }}
                 onMouseEnter={() => setHoveredService(service._id)}
                 onMouseLeave={() => setHoveredService(null)}

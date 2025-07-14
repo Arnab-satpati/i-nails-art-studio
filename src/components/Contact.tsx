@@ -215,7 +215,7 @@ const Contact: React.FC<ContactProps> = ({ darkMode }) => {
               
               <div className="flex space-x-4">
                 <a
-                  href="#"
+                  href="https://www.instagram.com/i_nails_art_and_studio?igsh=bmQ4bXh1amVqbW9p"
                   className="w-12 h-12 bg-yellow-500 hover:bg-yellow-600 text-white rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110"
                 >
                   <Instagram className="w-6 h-6" />

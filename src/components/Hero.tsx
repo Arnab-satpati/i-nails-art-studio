@@ -204,13 +204,16 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
                   <div className={`text-sm font-medium mb-1 ${
                     darkMode ? 'text-gray-300' : 'text-gray-600'
                   }`}>
-                    Award Winning
+                    Top google reviews
                   </div>
                   <div className={`text-2xl font-bold ${
                     darkMode ? 'text-white' : 'text-gray-900'
                   }`}>
                     Beauty Studio
                   </div>
+                  <small className={`text-sm font-medium mb-1 ${
+                    darkMode ? 'text-gray-300' : 'text-gray-600'
+                  }`}>in Sodepur (125+)</small>
                   <div className="flex items-center mt-2">
                     <div className="flex">
                       {[...Array(5)].map((_, i) => (
