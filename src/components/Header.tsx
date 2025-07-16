@@ -47,7 +47,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
         <div className="flex justify-between items-center h-20">
           {/* Logo with Animation */}
           {darkMode ? (
-  <a href="#"><img src="/logo-dark.png" alt="i Nails Dark" className="h-20" /></a>
+  <a href="#"><img src="/logo-dark.png" alt="i Nails Dark" className="h-[7vw] min-h-[60px]" /></a>
 ) : (
   <a href="#"><img src="/logo-dark.png" alt="i Nails Light" className="h-20" /></a>
 )}

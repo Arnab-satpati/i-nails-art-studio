@@ -30,9 +30,16 @@ const Services: React.FC<ServicesProps> = ({ darkMode }) => {
         setLoading(false);
       }
     };
+    
 
     fetchServices();
   }, []);
+  const scrollToContact = () => {
+    const element = document.querySelector('#contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   const fallbackServices = [
     {
@@ -221,7 +228,7 @@ const Services: React.FC<ServicesProps> = ({ darkMode }) => {
                   </div>
 
                   {/* CTA Button */}
-                  <button className={`group w-full py-4 rounded-full font-bold text-lg transition-all duration-300 relative overflow-hidden ${
+                  <button onClick={scrollToContact} className={`group w-full py-4 rounded-full font-bold text-lg transition-all duration-300 relative overflow-hidden ${
                     darkMode 
                       ? 'bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-white' 
                       : 'bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-white'

@@ -33,7 +33,12 @@ const Courses: React.FC<CoursesProps> = ({ darkMode }) => {
 
     fetchCourses();
   }, []);
-
+    const scrollToContact = () => {
+    const element = document.querySelector('#contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   // Default courses as fallback
   const fallbackCourses = [
     {
@@ -227,7 +232,7 @@ const Courses: React.FC<CoursesProps> = ({ darkMode }) => {
 
                   {/* CTA Buttons */}
                   <div className="flex flex-col sm:flex-row gap-3">
-                    <button className="flex-1 bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center justify-center space-x-2">
+                    <button onClick={scrollToContact} className="flex-1 bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center justify-center space-x-2">
                       <BookOpen className="w-5 h-5" />
                       <span>Enroll Now</span>
                     </button>
